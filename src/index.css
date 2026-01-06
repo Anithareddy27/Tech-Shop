@@ -92,3 +92,158 @@
 .image img {
   width: 400px;
 }
+/* .featured-section {
+  background: #0c0c0c;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.featured-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.featured-card {
+  text-align: center;
+  color: #aaa;
+  transition: all 0.5s ease;
+  transform: scale(0.85);
+  opacity: 0.6;
+  animation: fadeUp 1s ease forwards;
+}
+
+.featured-card img {
+  width: 180px;
+  margin: 20px 0;
+  transition: transform 0.5s ease;
+}
+
+.featured-card.active {
+  transform: scale(1.1);
+  opacity: 1;
+  color: #fff;
+}
+
+.featured-card:hover img {
+  transform: scale(1.1);
+} */
+
+/* .product-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.price span {
+  margin-left: 8px;
+  font-size: 13px;
+  text-decoration: line-through;
+  color: #777;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(0.85);
+    opacity: 0.6;
+  }
+} */
+.featured-section {
+  background: #0b0b0b;
+  padding: 60px 0;
+  overflow: hidden;
+}
+.featured-slider .slick-slide {
+  opacity: 0.4;
+  transform: scale(0.85);
+  transition: all 0.4s ease;
+}
+.featured-slider .slick-center {
+  opacity: 1;
+  transform: scale(1);
+}
+.featured-card {
+  text-align: center;
+  color: #fff;
+}
+.featured-card img {
+  max-width: 260px;
+  margin: 20px auto;
+}
+.product-title {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+.price span {
+  margin-left: 10px;
+  color: #777;
+  text-decoration: line-through;
+}
+/* Fix slick dots position */
+.featured-slider {
+  position: relative;
+}
+
+/* dots container */
+.featured-slider .slick-dots {
+  position: absolute;
+  bottom: -40px;   /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* hide numbers inside dots */
+.featured-slider .slick-dots li button:before {
+  font-size: 10px;
+  color: #aaa;
+  opacity: 1;
+}
+
+/* active dot */
+.featured-slider .slick-dots li.slick-active button:before {
+  color: #fff;
+}
+/* Fix slick dots position */
+.featured-slider {
+  position: relative;
+}
+
+/* dots container */
+.featured-slider .slick-dots {
+  position: absolute;
+  bottom: -40px;   /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* hide numbers inside dots */
+.featured-slider .slick-dots li button:before {
+  font-size: 10px;
+  color: #aaa;
+  opacity: 1;
+}
+
+/* active dot */
+.featured-slider .slick-dots li.slick-active button:before {
+  color: #fff;
+}
+

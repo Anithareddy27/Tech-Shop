@@ -49,11 +49,11 @@ const productsData = [
         id: 3,
         tag: "hero-product",
         tagline: "Featherweight for comfort all-day.",
-        heroImage: "public/images/products/boat131-3.png",
+        heroImage: "/Images/products/boat131-3.png",
         images: [
             "/Images/products/boat131-1.png",
             "/Images/products/boat131-2.png",
-            "Images/products/boat131-3.png",
+            "/Images/products/boat131-3.png",
             "/Images/products/boat131-4.png",
         ],
         brand: "boAt",
@@ -136,9 +136,9 @@ const productsData = [
         id: 7,
         tag: "hero-product",
         tagline: "Give your favourite music a boost.",
-        heroImage: "public/images/products/sonyxb910n-1.png",
+        heroImage: "/Images/products/sonyxb910n-1.png",
         images: [
-            "/Images/products/sonyxb910n-1.png",
+            "/src/assets/sonyxb910n-1 (1).png",
             "/Images/products/sonyxb910n-2.png",
             "/Images/products/sonyxb910n-3.png",
             "/Images/products/sonyxb910n-4.png",
@@ -310,7 +310,7 @@ const productsData = [
     {
         id: 15,
         images: [
-            "/Images/products/sonych710n-1.png",
+            "/src/assets/sonych710n-1 (1).png",
             "/Images/products/sonych710n-2.png",
             "/Images/products/sonych710n-3.png",
             "/Images/products/sonych710n-4.png",
@@ -394,7 +394,7 @@ const productsData = [
     {
         id: 19,
         images: [
-            "/Images/products/sonyxb400-1.png",
+            "/src/assets/sonyXb400-1.png",
             "/Images/products/sonyxb400-2.png",
             "/Images/products/sonyxb400-3.png",
             "/Images/products/sonyxb400-4.png",

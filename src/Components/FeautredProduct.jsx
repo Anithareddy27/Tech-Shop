@@ -36,7 +36,7 @@ export const FeaturedProducts = () => {
 
   return (
     <div className="featured-section">
-      <h4 className="text-center text-white mb-5">
+      <h4 className="text-center text-white mb-4" style={{color:"white", textAlign:"center"}}>
         Featured Products
       </h4>
 
@@ -65,3 +65,6 @@ export const FeaturedProducts = () => {
     </div>
   );
 };
+productsData.forEach(p => {
+  p.images.forEach(img => console.log(img));
+});

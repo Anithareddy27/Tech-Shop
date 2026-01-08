@@ -1,5 +1,6 @@
 import { Cursole } from "../Components/Cursole"
 import { FeaturedProducts } from "../Components/FeautredProduct"
+import { TopProducts } from "../Components/Topproduct"
 
 
 export const Home=()=>{
@@ -7,6 +8,7 @@ export const Home=()=>{
         <>
     <Cursole />
     <FeaturedProducts />
+    <TopProducts />
         </>
     )
 }

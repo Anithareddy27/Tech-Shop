@@ -1,9 +1,9 @@
+import { Adavantage } from "../Components/Advantages"
 import { Cursole } from "../Components/Cursole"
 import { FeaturedProducts } from "../Components/FeautredProduct"
-import { Login } from "../Components/Login"
-
+import { Header } from "../Components/Header"
 import { TopProducts } from "../Components/Topproduct"
-import { Searchbar } from "./Searchbar"
+
 
 
 export const Home=()=>{
@@ -11,9 +11,11 @@ export const Home=()=>{
         <>
     
     <Cursole />
-    {/* <Login /> */}
+  
     <FeaturedProducts />
     <TopProducts />
+    <Header />
+    <Adavantage />
         </>
     )
 }

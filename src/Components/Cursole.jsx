@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 let slides = [
 {
+    id: 7,
     title: "Give Your Favourite Music A Boost.",
     subtitle: "Sony WH-XB910N",
     price: "₹13,489",
     oldPrice: "₹19,999",
     image:"/src/assets/sonyXb910n-1 (1).png"
 },
-{
+{  
+    id:7,
     title: "Featherweight For Comfort All-Day",
     subtitle: "Sony WH-1000XM5",
     price: "₹24,999",
@@ -15,6 +18,7 @@ let slides = [
     image:"/src/assets/boat131-3.png"
 },
 {
+    id:7,
     title: "Give Your Favourite Music A Boost",
     subtitle: "Sony WH-1000XM5",
     price: "₹24,999",
@@ -24,7 +28,7 @@ let slides = [
 
 ];
 export const Cursole=()=>{
-
+const navigate = useNavigate();
 let[current, setCurrent]=useState(0)
 useEffect(() => {
 let timer = setInterval(() => {
@@ -50,7 +54,7 @@ let timer = setInterval(() => {
               <span className="old">{slide.oldPrice}</span>
             </div>
 
-            <button className="btn">Shop Now</button>
+            <button className="btn" onClick={()=>navigate(`/product/${slide.id}`)}>Shop Now</button>
           </div>
 
           <div className="image">

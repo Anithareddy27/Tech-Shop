@@ -1,3 +1,4 @@
+
 import { createContext, useContext, useState } from "react";
 
 const SearchContext = createContext();
@@ -7,10 +8,9 @@ export const SearchProvider = ({ children }) => {
 
   return (
     <SearchContext.Provider value={{ open, setOpen }}>
-    {children}
+      {children}
     </SearchContext.Provider>
   );
 };
 
 export const useSearch = () => useContext(SearchContext);
-

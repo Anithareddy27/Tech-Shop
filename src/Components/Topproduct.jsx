@@ -1,6 +1,7 @@
 import { useState } from "react";
 import productsData from "../ProductData";
-
+import { useCart } from "../Context/CartContext";
+import { Link } from "react-router-dom";
 
 const categories = [
   "All",
@@ -12,6 +13,7 @@ const categories = [
 
 export const TopProducts = () => {
   const [active, setActive] = useState("All");
+  const { addToCart, cartItems } = useCart();
 
   const filteredProducts =
     active === "All"
@@ -22,7 +24,7 @@ export const TopProducts = () => {
     <div className="top-products">
       <h3 className="section-title">Top Products</h3>
 
-
+      {/* CATEGORY TABS */}
       <div className="category-tabs">
         {categories.map((cat) => (
           <button
@@ -35,35 +37,59 @@ export const TopProducts = () => {
         ))}
       </div>
 
+      {/* PRODUCTS GRID */}
       <div className="products-grid">
-        {filteredProducts.map((product) => (
-          <div className="product-card" key={product.id}>
-            <img
-              src={product.images[0]}
-              alt={product.title}
-            />
+        {filteredProducts.map((product) => {
+          const isAdded = cartItems.some(
+            (item) => item.id === product.id
+          );
 
-            <h4>{product.title}</h4>
-            <p className="info">{product.info}</p>
+          return (
+            <div className="product-card" key={product.id}>
+              <img
+                src={product.images[0]}
+                alt={product.title}
+              />
 
-        
-            <div className="rating">
-              {"★".repeat(product.rateCount)}
+              <h4>{product.title}</h4>
+              <p className="info">{product.info}</p>
+
+              <div className="rating">
+                {"★".repeat(product.rateCount)}
+              </div>
+
+              <p className="price">
+                ₹{product.finalPrice.toLocaleString()}
+                <span>
+                  ₹{product.originalPrice.toLocaleString()}
+                </span>
+              </p>
+
+              <button
+                className={`add-cart ${isAdded ? "added" : ""}`}
+                onClick={() => addToCart(product)}
+                disabled={isAdded}
+              >
+                {isAdded ? "Added to Cart" : "Add to Cart"}
+              </button>
             </div>
+          );
+        })}
 
-           
-            <p className="price">
-              ₹{product.finalPrice.toLocaleString()}
-              <span>
-                ₹{product.originalPrice.toLocaleString()}
-              </span>
-            </p>
+        {/* 🔥 BROWSE ALL CARD */}
+        {active !== "All" && (
+  <Link to="/productcard" className="browse-link">
+    <div className="product-card browse-card">
+      <div className="browse-content">
+        <h4>Browse All</h4>
+        <p>Products →</p>
+      </div>
+    </div>
+  </Link>
+)}
 
-            <button className="add-cart">
-              Add to cart
-            </button>
-          </div>
-        ))}
+     
+      
       </div>
     </div>
   );
